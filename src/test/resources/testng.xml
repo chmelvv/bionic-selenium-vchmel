@@ -1,17 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Rozetka" verbose="1" >
-    <!--<test name="GoogleTest" >-->
-        <!--<classes>-->
-            <!--<class name="com.bionic_university.selenium.GoogleSearchTest" />-->
-        <!--</classes>-->
-    <!--</test>-->
-    <test name="searchGalaxy" >
-        <classes>
-            <class name="com.bionic_university.selenium.Rozetka" />
-        </classes>
-    </test>
-    <test name="search Exynos">
+<suite name="Rozetka suite" verbose="1" >
+    <test name="Rozetka test" >
         <classes>
             <class name="com.bionic_university.selenium.Rozetka" />
         </classes>

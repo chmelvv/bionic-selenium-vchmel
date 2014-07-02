@@ -3,14 +3,12 @@ package com.bionic_university.selenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.util.List;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -24,7 +22,7 @@ import java.util.concurrent.TimeUnit;
     4) Close FF
 */
 public class GoogleSearchTest {
-    WebDriver driver = new FirefoxDriver();
+    WebDriver driver = new ChromeDriver();
 
     @BeforeClass //Preconditions
     public void setUp() {
@@ -35,10 +33,12 @@ public class GoogleSearchTest {
 
     @Test
     public void searchTest() {
-        WebElement searchField = driver.findElement(By.id("gbqfq")); //found id of search field in Google
-        searchField.sendKeys("Selenium"); // transfer "Selenium" to search field
+      //  WebElement searchField = driver.findElement(By.id("gbqfq")); //found id of search field in Google
+//        WebElement searchField = driver.findElement(By.name("q")); //found name  of search field in Google
+        WebElement searchField = driver.findElement(By.partialLinkText("Selenium"));
+        searchField.sendKeys("Selenium IDE"); // transfer "Selenium" to search field
 
-        WebElement seleniumLink = driver.findElement(By.xpath(".//*[@id='rso']/div/li[1]/div/h3/a")); //Found via FireBug and XPath Xpath to first searched element
+        WebElement seleniumLink = driver.findElement(By.xpath("IDE")); //Found via FireBug and XPath Xpath to first searched element
 
         Assert.assertEquals(seleniumLink.getText().toString().contains("Selenium"), true);
 

@@ -1,9 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" verbose="1" >
-    <test name="GoogleTest" >
+<suite name="Rozetka" verbose="1" >
+    <!--<test name="GoogleTest" >-->
+        <!--<classes>-->
+            <!--<class name="com.bionic_university.selenium.GoogleSearchTest" />-->
+        <!--</classes>-->
+    <!--</test>-->
+    <test name="searchGalaxy" >
         <classes>
-            <class name="com.bionic_university.selenium.GoogleSearchTest" />
+            <class name="com.bionic_university.selenium.Rozetka" />
+        </classes>
+    </test>
+    <test name="search Exynos">
+        <classes>
+            <class name="com.bionic_university.selenium.Rozetka" />
         </classes>
     </test>
 </suite>

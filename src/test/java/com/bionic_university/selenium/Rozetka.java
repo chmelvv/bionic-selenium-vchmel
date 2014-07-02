@@ -29,7 +29,7 @@ import org.testng.annotations.Test;
  */
 public class Rozetka {
     WebDriver driver = new FirefoxDriver();
-    WebElement firstLink;
+    WebElement firstLink = null;
 
     @BeforeSuite
     public void setUp(){
@@ -45,7 +45,7 @@ public class Rozetka {
         WebElement searchButton = driver.findElement(By.className("btn-link-i"));
         searchButton.click();
 
-        firstLink = driver.findElement(
+        this.firstLink = driver.findElement(
                 //Choose link of first position in search result list
                 By.xpath("(//div[contains(concat(' ', @class, ' '), 'g-i-list-title')])[1]/a"));
         Assert.assertEquals(firstLink.getText(), "Samsung G900H Galaxy S5 Black");

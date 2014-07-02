@@ -57,7 +57,7 @@ public class Rozetka {
 
         WebElement description = driver.findElement(By.cssSelector(".pp-description"));
         System.out.println(description.getText());
-        Assert.assertTrue(description.getText().contains("Exynos 5422 (Quad 1.9 "));
+        Assert.assertTrue(description.getText().contains("Exynos 5422 (Quad 1.9 ГГц"));
 
     }
 
